@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Aheneah</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="nav-wrapper pink accent-1">
+            <a href="index.html" class="brand-logo" style="padding-left: 15px;"
+              ><img src="img/white_logo.png" width="100" height="auto"
+            /></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="help.html">Instruções</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h2>Instruções</h2>
+        <div class="divider"></div>
+        <h4>Precauções de uso</h4>
+        <ul class="collection">
+          <li class="collection-item">
+            A divisão do número de pixeis de comprimento e largura da imagem
+            inserida por o número inserido no comprimento de uma quadrícula tem
+            de ter resto 0. Se isto não acontecer os resultados não serão
+            precisos.
+          </li>
+          <li class="collection-item">
+            Fazer sempre a verificação de todas as imagens. A aplicação não é
+            infalível.
+          </li>
+        </ul>
+        <div class="divider"></div>
+        <h4>Como funciona</h4>
+        <ul class="collection">
+          <li class="collection-item">
+            A aplicação começa no pixel com as coordenadas (0,0) sendo que o
+            eixo dos x anda da esquerda para a direita e o eixo dos y de cima
+            para baixo.
+          </li>
+          <li class="collection-item">
+            A aplicação assume que o tamanho da quadricula é aquele fornecido
+            pelo que é de máxima importância este valor ser exato.
+          </li>
+          <li class="collection-item">
+            Vai ao pixel central da quadricula e vê a sua cor. Neste passo tem a
+            tolerância fornecida em consideração.
+          </li>
+          <li class="collection-item">
+            Para um valor exemplo de tolerância de 10 numa cor que tenha o
+            perfil de rgba(30, 20, 10, 255) vai considerar da mesma cor todas as
+            cores que tiverem o valor de vermelho compreendido entre os 20 e os
+            40 e verde entre os 10 e 30 e azul entre os 0 e 20.
+          </li>
+          <li class="collection-item">
+            Se a cor já estiver catalogada desenha uma quadrícula numa nova
+            imagem com o tamanho e cores especificados. Se não estiver
+            adiciona ao catálogo e desenha a nova quadricula.
+          </li>
+          <li class="collection-item">
+            Repete para as restantes quadriculas da imagem
+          </li>
+        </ul>
+        <div class="divider"></div>
+        <h4>Limitações</h4>
+        <ul class="collection">
+          <li class="collection-item">Aceita no máximo 99 cores</li>
+          <li class="collection-item">
+            Para o Google Chrome uma imagem numerada pode ter no máximo 32767
+            pixeis e uma área total de 268,435,456 pixels (e.g. 16,384 x 16,384)
+          </li>
+        </ul>
+      </main>
+      <footer>
+        <div class="divider"></div>
+        <br />
+        <i class="material-icons">build</i> with
+        <i class="material-icons">favorite</i> by Tiago Silva | 2019
+        <div id="divider"></div>
+        <br />
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>

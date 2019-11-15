@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Aheneah</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="nav-wrapper pink accent-1">
+            <a href="index.html" class="brand-logo" style="padding-left: 15px;"><img src="img/white_logo.png" width="100" height="auto"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="help.html">Instruções</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="row">
+          <!-- card com form -->
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title"
+                  >Stencil e Numerador de Quadrículas</span
+                >
+                <form id="img_upload">
+                  <div class="input-field">
+                    <label for="square_size"
+                      >Comprimento da quadrícula em pixeis</label
+                    >
+                    <input
+                      type="number"
+                      id="square_size"
+                      class="validate"
+                      required
+                    />
+                  </div>
+                  <div class="input-field">
+                    <label for="rgba_tolerance"
+                      >Tolerância dos valores RGBa</label
+                    >
+                    <input
+                      type="number"
+                      id="rgba_tolerance"
+                      value="10"
+                      class="validate"
+                      required
+                    />
+                  </div>
+                  <div class="input-field">
+                    <label for="final_canvas_square_size"
+                      >Tamanho da quadrícula final em pixeis</label
+                    >
+                    <input
+                      type="number"
+                      id="final_canvas_square_size"
+                      value="50"
+                      class="validate"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="final_canvas_square_size"
+                      >Cor da quadrícula:
+                    </label>
+                    <input type="color" id="aux_color" value="#fd26b2" />
+                  </div>
+                  <br />
+                  <div>
+                    <label for="final_canvas_square_size">Cor do texto: </label>
+                    <input type="color" id="text_color" value="#ffffff" />
+                  </div>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="include_white_squares"
+                    />
+                    <span>Incluir quadrículas brancas</span>
+                  </label>
+                  <br />
+                  <br />
+                  <div class="row">
+                    <label>Imagem a numerar</label>
+                    <div class="file-field input-field">
+                      <div class="btn waves-effect waves-light pink accent-1">
+                        <span>Pesquisar</span>
+                        <input type="file" id="img" required />
+                      </div>
+
+                      <div class="file-path-wrapper">
+                        <input
+                          class="file-path validate"
+                          type="text"
+                          placeholder=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <button
+                      class="btn waves-effect waves-light pink accent-1 col s4 offset-s8"
+                      type="submit"
+                      name="action"
+                    >
+                      Numerar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- card imagem escolhida -->
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img id="img_preview" src="img/placeholder_image.jpg" />
+                <span class="card-title black-text">Imagem Selecionada</span>
+              </div>
+            </div>
+          </div>
+          <!-- card imagem final -->
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img id="img_final" src="img/placeholder_image.jpg" />
+                <span class="card-title black-text">Imagem Numerada</span>
+              </div>
+              <div class="card-action">
+                <a
+                  id="img_final_view"
+                  class="waves-effect waves-light btn pink accent-1"
+                  ><i class="material-icons right">print</i>Imprimir</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- card catalogo de cores -->
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img id="color_catalog" src="img/placeholder_image.jpg" />
+                <span class="card-title black-text">Catálogo de Cores</span>
+              </div>
+              <div class="card-action">
+                <a
+                  id="color_catalog_view"
+                  target="_blank"
+                  class="waves-effect waves-light btn pink accent-1"
+                  ><i class="material-icons right">print</i>Imprimir</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- card stencil -->
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img id="stencil" src="img/placeholder_image.jpg" />
+                <span class="card-title black-text">Stencil</span>
+              </div>
+              <div class="card-action">
+                <a
+                  id="stencil_view"
+                  class="waves-effect waves-light btn pink accent-1"
+                  ><i class="material-icons right">print</i>Imprimir</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="divider"></div>
+        <br />
+        <i class="material-icons">build</i> with
+        <i class="material-icons">favorite</i> by Tiago Silva | 2019
+        <div id="divider"></div>
+        <br />
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/img_numerator.js"></script>
+  </body>
+</html>
