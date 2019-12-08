@@ -19,11 +19,11 @@ Restrições:
 
 ## Instalação
 
-1. Abrir o ficheiro [index.html](index.html);
+1. Abrir o ficheiro [index.html](https://tiagomarquessilva.github.io/aheneah/index.html);
 
 ## Documentação
 
-- [Página das Instruções](help.hmtl).
+- [Página das Instruções](https://tiagomarquessilva.github.io/aheneah/help.html).
 
 ## Autores
 
