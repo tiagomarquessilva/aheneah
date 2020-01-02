@@ -19,7 +19,7 @@ Restrições:
 
 ## Instalação
 
-1. Abrir o ficheiro [index.html](https://tiagomarquessilva.github.io/aheneah/index.html);
+1. [Aceder à página do GitHub Pages](https://tiagomarquessilva.github.io/aheneah/index.html);
 
 ## Documentação
 
